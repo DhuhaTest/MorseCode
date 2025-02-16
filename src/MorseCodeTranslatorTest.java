@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 public class MorseCodeTranslatorTest {
@@ -11,6 +12,11 @@ public class MorseCodeTranslatorTest {
     @Test
     public void testMorseToEnglish() {
         assertEquals("HELLOWORLD", MorseCodeTranslator.morseToEnglish(".... . .-.. .-.. --- .-- --- .-. .-.. -.."));
+    }
+
+    @Test
+    public void testMorseToEnglishSpace() {
+        assertEquals("HELLO WORLD", MorseCodeTranslator.morseToEnglish(".... . .-.. .-.. ---   .-- --- .-. .-.. -.."));
     }
 
     @Test
@@ -28,6 +34,7 @@ public class MorseCodeTranslatorTest {
         });
         assertEquals("Fel: Ogiltigt tecken '1'", exception.getMessage());
     }
+
 
     @Test
     public void testLowercaseInput() {
