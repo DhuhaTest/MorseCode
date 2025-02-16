@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class MorseCodeTranslatorTest {
 
-    @org.junit.Test
+    @Test
     public void testEnglishToMorse() {
         assertEquals(".... . .---", MorseCodeTranslator.englishToMorse("HEJ"));
     }
